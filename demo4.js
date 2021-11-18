@@ -71,9 +71,18 @@ export class Demo4 extends Scene {
         // // Example 1
         // this.box_1_transform = Mat4.translation(-2,0,0);
         // this.box_2_transform = Mat4.translation(2,0,0);
-        // this.shapes.box_2.arrays.texture_coord.forEach(
-        //     (v, i, l) => l[i] = vec(v[1], v[0])
-        // )
+        //
+        // // this.shapes.box_2.arrays.texture_coord.forEach(
+        // //     (v, i, l) => l[i] = vec(v[1], v[0])
+        // // )
+        //
+        // // equivalent for loop
+        // let texture_coord = this.shapes.box_2.arrays.texture_coord;
+        // for (let i = 0; i < texture_coord.length; i++) {
+        //     let new_coord = vec(texture_coord[i][1], texture_coord[i][0]);
+        //     this.shapes.box_2.arrays.texture_coord[i] = new_coord;
+        // }
+        //
         // this.shapes.box_1.draw(context, program_state, this.box_1_transform, this.materials.texture);
         // this.shapes.box_2.draw(context, program_state, this.box_2_transform, this.materials.texture);
 
